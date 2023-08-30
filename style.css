@@ -1,0 +1,220 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(hsl(273, 75%, 66%), hsl(240, 73%, 65%));
+    font-family: 'Kumbh Sans', sans-serif;
+    position: relative;
+}
+
+button {
+    border: none;
+    background: none;
+}
+
+.box img {
+    position: absolute;
+    top: 315px;
+    left: 142px;
+}
+
+.content {
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(./images/bg-pattern-desktop.svg);
+    background-size: 60rem;
+    background-repeat: no-repeat;
+    background-position-x: -35.2rem;
+    background-position-y: -18.4rem ;
+    border-radius: 22px;    
+}
+
+.content img {
+    max-width: 500px;
+    object-position: -85px;
+}
+
+.perguntas {
+    padding: 50px 100px 80px 0px;
+  }  
+
+  .perguntas h2 {
+    margin-bottom: 20px;
+    font-size: 2rem;
+  }
+  
+  .perguntas dl > div {
+    padding: 20px 0px;
+  }  
+  
+  .perguntas button {
+    display: grid;
+    grid-template-columns: 2fr auto;
+    align-items: center;    
+    width: 100%;
+    text-align: left;
+    cursor: pointer;
+    background: none; 
+    font-size: 1rem;
+    color: hsl(240, 6%, 50%);
+  }
+
+  .perguntas dt button:hover {
+    color:hsl(14, 88%, 65%);
+  }
+
+  .questions {
+    margin: 0;
+    padding: 0;
+    border-bottom: 1px solid hsl(240, 5%, 91%);
+    max-width: 400px;
+  }
+
+  .perguntas button::after {
+    content: "";
+    display: inline-block;
+    width: 10px;
+    height: 6px;
+    background-image: url("./images/icon-arrow-down.svg");
+    transition: 0.3s;
+    margin-left: 60px;
+  }
+  
+  .perguntas button:hover::after,
+  .perguntas button[aria-expanded="true"]::after {
+    transform: rotate(180deg);
+  }
+
+  .perguntas button[aria-expanded="true"] {
+    font-weight: 700;
+    color:black;
+  }
+  
+ .perguntas dd.ativa {
+    display: block;
+  }
+  
+  .perguntas dd {
+    display: none;
+    padding-top: 16px;
+    font-size: 14px;
+    max-width: 60ch;
+    color: hsl(240, 6%, 50%);
+  }
+  
+  @media (max-width: 800px) {   
+
+    .box img {
+      display: none;
+    }
+
+  .content {
+    background-image: url(./images/bg-pattern-mobile.svg);
+    background-position: center center;
+    background-size: 210px;
+    background-position-y: 0px;
+    flex-direction: column;
+  }
+  
+  .content, .content img ,.box img {
+      max-width: 320px;      
+  }
+  
+  .content  img {      
+    display: none;
+  }
+
+  .content .img {
+    position: absolute;
+    background-image: url(./images/illustration-woman-online-mobile.svg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 55%;
+    top: -248px;
+  }
+  
+  .perguntas {
+      padding: 100px 25px 40px 25px;
+    }  
+    .perguntas h2 {
+      text-align: center;
+      margin:10px 0px 20px 0px;
+      font-size: 2rem;
+    }   
+  
+    .perguntas dt button:hover {
+      color:hsl(14, 88%, 65%);
+    }
+  
+    .questions {
+      margin: 0;
+      padding: 0;
+      border-bottom: 1px solid hsl(240, 5%, 91%);
+      max-width: 400px;
+    }
+  
+    .perguntas button::after {
+      content: "";
+      display: inline-block;
+      width: 10px;
+      height: 6px;
+      background-image: url("./images/icon-arrow-down.svg");
+      transition: 0.3s;
+      margin-left: 0px;
+    }
+    
+    .perguntas button:hover::after,
+    .perguntas button[aria-expanded="true"]::after {
+      transform: rotate(180deg);
+  
+    }
+  
+    .perguntas button[aria-expanded="true"] {
+      font-weight: 700;
+      color:black;
+    }
+
+    .perguntas button[aria-expanded="false"] {
+      color: hsl(240, 6%, 50%);
+    }
+    .perguntas button {
+      display: grid;
+      grid-template-columns: 2fr auto; 
+      width: 100%;
+      text-align: left;
+      cursor: pointer;
+      background: none; 
+      font-size: .72rem;      
+    }
+
+    .perguntas dl > div {
+      padding: 15px 0px;
+  }
+  
+    
+   .perguntas dd.ativa {
+      display: block;
+    }
+    
+    .perguntas dd {
+      display: none;
+      padding-top: 16px;
+      font-size: 11px;
+      max-width:240px;
+      color: hsl(240, 6%, 50%);
+    }
+  }
+  
